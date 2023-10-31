@@ -85,10 +85,54 @@ df.describe()
 df.info()
 ```
 
+Bentuk EDA
+
 ```python
 sns.heatmap(df.isnull())
 ```
 ![Heatmap](https://github.com/FathanNaufalR/Mas_Atan/assets/149129682/1ef02b7c-a85c-4ed4-91e1-432092f3066e)
+
+
+```python
+plt.figure(figsize=(25,15))
+sns.heatmap(df.corr(),annot=True)
+```
+![sns heatmap](https://github.com/FathanNaufalR/Mas_Atan/assets/149129682/8ab968c1-8f6d-4919-9b6c-b2af840d3a9d)
+
+
+```python
+models = df.groupby('diagnosis').count()[['smoothness_mean']].sort_values(by='smoothness_mean',ascending=True).reset_index()
+models = models.rename(columns={'smoothness_mean':'rata-rata_kelembutan'})
+```
+```python
+# B= benign(Jinak)
+# M= Malignant(Ganas)
+
+fig = plt.figure(figsize=(15,5))
+sns.barplot(x=models['diagnosis'], y=models['rata-rata_kelembutan'], color='orange')
+plt.xticks(rotation=60)
+```
+![plt diagnosis](https://github.com/FathanNaufalR/Mas_Atan/assets/149129682/fcaf744e-eefe-47c1-9b10-9d87a47db856)
+
+```python
+#Distribusi kecekungan terburuk
+#concavity(Kecekungan)
+
+plt.figure(figsize=(15,5))
+sns.distplot(df['concavity_worst'])
+```
+![distribusi convacity_worst](https://github.com/FathanNaufalR/Mas_Atan/assets/149129682/5569e13c-e533-457f-ac51-8b27945249ce)
+
+
+```python
+# DISTRUBUSI Perimeter Terburuk
+
+plt.figure(figsize=(15,5))
+sns.distplot(df['perimeter_worst'])
+```
+![distribusi perimeter_worst](https://github.com/FathanNaufalR/Mas_Atan/assets/149129682/51fba6cd-8b60-42c6-b719-cc51d42b6aea)
+
+
 
 
 
