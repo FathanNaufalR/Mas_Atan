@@ -85,7 +85,7 @@ df.describe()
 df.info()
 ```
 
-Bentuk EDA
+## Data Understanding
 
 ```python
 sns.heatmap(df.isnull())
