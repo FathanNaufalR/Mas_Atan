@@ -85,6 +85,13 @@ df.describe()
 df.info()
 ```
 
+```python
+sns.heatmap(df.isnull())
+```
+![Heatmap](https://github.com/FathanNaufalR/Mas_Atan/assets/149129682/1ef02b7c-a85c-4ed4-91e1-432092f3066e)
+
+
+
 ### Penjelasan Variabel pada Breast Cancer Dataset yaitu:
 -id                     : Nomor pengenal dari pasien  [Bertipe: int64]
 
