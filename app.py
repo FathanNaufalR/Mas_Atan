@@ -6,7 +6,7 @@ model = pickle.load(open('pizza-price-prediction.sav', 'rb'))
 
 st.title('Prediksi Harga Pizza')
 
-
+""" company (0 = A, 1 = B, 2 = C, 3 = D, 4 = E)"""
 Company = st.selectbox('Pilih Company: ', ['0','1','2','3','4'])
 
 
