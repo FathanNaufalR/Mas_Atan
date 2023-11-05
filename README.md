@@ -232,3 +232,6 @@ pickle.dump(lr,open(filename,'wb'))
 
 https://masatan-nfaps6gzqmkeahxtah3yf8.streamlit.app/
 
+![image](https://github.com/FathanNaufalR/Mas_Atan/assets/149129682/6ffb3893-3238-45d2-89a7-ede3ac170458)
+![image](https://github.com/FathanNaufalR/Mas_Atan/assets/149129682/237ea548-2f0e-4381-b9dc-fbca029b2e8e)
+
